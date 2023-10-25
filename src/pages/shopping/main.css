@@ -1,0 +1,16 @@
+
+.shops{
+    width: 15.7rem;
+    height: 15.3rem;
+}
+
+
+
+
+.shopsimg{
+    width: 15.7rem;
+    height: 20rem;
+    flex-shrink: 0;
+    border-radius: 1rem;
+    background: #C4C4C4;
+}
