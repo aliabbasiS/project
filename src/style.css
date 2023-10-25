@@ -1,19 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Gelasio:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+.fontg{font-family: 'Gelasio', serif;}
+.fontm{font-family: 'Merriweather', serif;}
+
 
 .bg{
-    display: flex;
-    background-image: url(../public/Mask\ Group.jpg);
-    width:23rem;
+display: flex;
+background-image: url(../public/Mask\ Group.jpg);
+width:23rem;
     height: 50rem;
     object-fit: cover;
     overflow: hidden; 
     margin: 0 auto;
     margin-top: 12rem;
 }
-.fontg{font-family: 'Gelasio', serif;}
-.fontm{font-family: 'Merriweather', serif;}
-
