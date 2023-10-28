@@ -1,4 +1,4 @@
-export const navbar=()=>{
+export const routes=()=>{
     [
         {path:'/',title:'homepage'},
         {path:'/regester',title:'regster'},

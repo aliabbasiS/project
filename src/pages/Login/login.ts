@@ -21,7 +21,7 @@ export const Login = () => box({
 
                     children: [
                         box({ element: 'div', attr: { style: 'width: 8.5625rem;height: 0.0625rem;border-radius: 0.125rem;border: 1px solid #000;background: var(--Gray-4, #BDBDBD);' } }),
-                        box({ element: 'img', attr: { src: '/public/images/group.svg', class: 'justify-center flex' } }),
+                        box({ element: 'img', attr: { src: 'public/pixar/group.jpg', class: 'justify-center flex' } }),
 
                         box({ element: 'div', attr: { style: 'width: 8.5625rem;height: 0.0625rem;border-radius: 0.125rem;border: 1px solid #000;background: var(--Gray-4, #BDBDBD);' } }),
                     ],
@@ -39,7 +39,7 @@ export const Login = () => box({
                         box({ element: 'div', children: FormLogin() }),box({element:'a',children:'Forget Password',attr:{class:'text-lg font-semibold  flex justify-center mt-8'}}),
                         box({
                             element: 'div', children: [
-                                box({ element: 'button', children: 'SIGN UP', attr: { class: 'fontm items-center flex justify-center text-xl font-bold mt-10 w-1/2 p-4 bg-slate-900 rounded-xl text-white', style: 'background: var(--Primary, #242424);box-shadow: 0px 10px 20px 0px rgba(48, 48, 48, 0.25);' } }),
+                                box({ element: 'button', children: 'Log in', attr: { class: 'fontm items-center flex justify-center text-xl font-bold mt-10 w-1/2 p-4 bg-slate-900 rounded-xl text-white', style: 'background: var(--Primary, #242424);box-shadow: 0px 10px 20px 0px rgba(48, 48, 48, 0.25);' } }),
                             ],attr:{class:'flex justify-center'}
                         }),box({element:'a',children:'Sign Up',attr:{class:'text-lg font-semibold  flex justify-center mt-8'}})
                     ], attr: { class: 'bg-white h-4/5 mr-10  mb-10 justify-center flex flex-col p-8', style: 'box-shadow: 0px 7px 30px 0px rgba(138, 149, 158, 0.20);' }

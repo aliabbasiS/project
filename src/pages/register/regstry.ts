@@ -1,5 +1,5 @@
-import { render } from './../../../renderer';
-const duck:registerformtype=[]
+
+
 
 const localStoragearr:registerformtype[]=[]
 type registerformtype = {
@@ -52,6 +52,9 @@ export const handelregesterform = (e:Event) => {
     const repeatPasswordInput = document.getElementById('repeat-password') ;
     
 
+
+
+
     const name = nameInput!.value;
     const email = emailInput!.value;
     const password = passwordInput!.value;
@@ -64,7 +67,7 @@ export const handelregesterform = (e:Event) => {
       repeatPasswordi:repeatPassword,
     };
     if(varifylist(formData)){
-      console.log(duck.push(formData));
+      console.log(localStoragearr.push(formData));
 
     }
 
