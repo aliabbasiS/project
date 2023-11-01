@@ -1,3 +1,5 @@
+import { layout } from "../../Layout/layout";
+import { registerrender } from "../../Routing/routes";
 import { box } from "../../lib/box";
 import { register } from './../register/register';
 
@@ -34,7 +36,7 @@ export const mainpage = () => {
           attr: {
             class: 'h-20 w-3/4 rounded my-14 bg-slate-700 text-white fontg text-xl flex justify-center items-center',
             onclick:()=>{
-              return (register())
+              registerrender()
             }
           }
         }),attr:{

@@ -1,3 +1,12 @@
+
+
+import { register } from './../pages/register/register';
+import { Login } from './../pages/Login/login';
+import { mainpage } from './../pages/mainpage/mainpage';
+import { favorite } from './../pages/favotitepage/favorite';
+import { shoppingmain } from './../pages/shopping/shoppingmain';
+import { standshopcard } from '../pages/mainshopcart/standmainshop';
+
 export const routes=()=>{
     [
         {path:'/',title:'homepage'},
@@ -6,3 +15,60 @@ export const routes=()=>{
         {path:'/landing',title:'landing'}
     ]
 }
+export const main = () => {
+    const container = document.getElementById('app');
+  
+    if (container) {
+      container.innerHTML = '';
+      const form =mainpage();
+      container.appendChild(form);
+    }
+  };
+export const registerrender = () => {
+    const container = document.getElementById('app');
+  
+    if (container) {
+      container.innerHTML = '';
+      const form =register();
+      container.appendChild(form);
+    }
+  };
+ 
+export const Loginrender = () => {
+    const container = document.getElementById('app');
+  
+    if (container) {
+      container.innerHTML = '';
+      const form =Login();
+      container.appendChild(form);
+    }
+  };
+ 
+export const shoppingmainrender = () => {
+    const container = document.getElementById('app');
+  
+    if (container) {
+      container.innerHTML = '';
+      const form =shoppingmain();
+      container.appendChild(form);
+    }
+  };
+ 
+export const favoriterender = () => {
+    const container = document.getElementById('app');
+  
+    if (container) {
+      container.innerHTML = '';
+      const form =favorite();
+      container.appendChild(form);
+    }
+  };
+export const standshopcardrender=()=>{
+  const container = document.getElementById('app');
+
+  if (container) {
+    container.innerHTML = '';
+    const form =standshopcard();
+    container.appendChild(form);
+  }
+};

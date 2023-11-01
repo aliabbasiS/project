@@ -1,4 +1,4 @@
-// Function to handle the plus button click
+
 let numberproduct=0
 export const handlePlusClick = () => {
     const numberDiv = document.getElementById('numberdiv');
@@ -10,7 +10,7 @@ export const handlePlusClick = () => {
     }
   };
   
-  // Function to handle the minus button click
+ 
 export const handleMinusClick = () => {
     const numberDiv = document.getElementById('numberdiv');
     if (numberDiv) {
@@ -21,4 +21,4 @@ export const handleMinusClick = () => {
     }
   };
 
-  //handlePlusClick , handleMinusClick
+ 

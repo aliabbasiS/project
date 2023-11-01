@@ -1,3 +1,4 @@
+import { favoriterender, shoppingmainrender } from "../../Routing/routes";
 import { box } from "../../lib/box";
 import { iconmaker } from "./iconmaker";
 import { shopcartmaker } from "./imgmaker";
@@ -14,7 +15,7 @@ export const shoppingmain = () => {
       box({
         element: 'div',
         attr: {
-          class: 'w-1/2 h-1/2 flex flex-col',
+          class: 'w-1/2  flex flex-col',
         },
         children: [
           //top nav titles

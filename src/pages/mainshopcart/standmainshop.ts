@@ -1,5 +1,6 @@
-import { box } from "../../../lib/box";
-import { handlePlusClick,handleMinusClick } from "../clickhandler";
+import { box } from "../../lib/box";
+import { favoritemakerarr } from "../favotitepage/favoritelist";
+import { handlePlusClick,handleMinusClick } from "./clickhandler";
 
 
 export const standshopcard = () => {
@@ -65,7 +66,10 @@ export const standshopcard = () => {
 
             //footer button
             box({element:'div',children:[
-                box({element:'button',children:'Add to cart',attr:{class:"w-4/5 h-20 bg-slate-900 text-white rounded-lg text-2xl"}}),box({element:'button',children:[box({element:'img',attr:{src:'public/pixar/marker-2.svg',class:'bg-slate-200'}})],attr:{class:"flex justify-center items-center w-1/5 h-20 bg-slate-200 text-white rounded-lg"}})
+                box({element:'button',children:'Add to cart',attr:{class:"w-4/5 h-20 bg-slate-900 text-white rounded-lg text-2xl"}})
+                ,box({element:'button',children:[box({element:'img',attr:{src:'public/pixar/marker-2.svg',class:'bg-slate-200'}})],attr:{class:"flex justify-center items-center w-1/5 h-20 bg-slate-200 text-white rounded-lg"}}),
+                  
+                
             ],attr:{class:'flex gap-3 mt-5 flex-row-reverse px-3 '}})
 
         

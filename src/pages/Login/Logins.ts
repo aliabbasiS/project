@@ -1,21 +1,29 @@
+import { shoppingmainrender } from "../../Routing/routes";
+import { registerformtype } from "../register/regstry";
+
 const userString = localStorage.getItem('user');
-const arr = userString ? JSON.parse(userString) : [];
+const arr: registerformtype[] = userString ? JSON.parse(userString) : [];
 
+function findMatchingMember(email: string, password: string): registerformtype | undefined {
+  return arr.find((member: registerformtype) => member.email === email && member.password === password);
+}
 
-  function findMatchingMember(email, password:register) {
-    return arr!.find((member:object) => member.email === email && member.password === password);
-  }
-  
-  const Loginhandeler = () => {
-    const emailaddress = { name: "ali", email: "hello@cc.com", password: "123", repeatPassword: "123" };
-  
-    const matchingMember = findMatchingMember(emailaddress.email, emailaddress.password);
-    
+export const Loginhandler = () => {
+  const emailInput = (document.getElementById('email') as HTMLInputElement)?.value;
+  const passwordInput = (document.getElementById('password') as HTMLInputElement)?.value;
+  console.log(emailInput,passwordInput)
+
+  if (emailInput && passwordInput) {
+    const matchingMember = findMatchingMember(emailInput, passwordInput);
+
     if (matchingMember) {
-      console.log("Login successful!");
-     
+      alert("Login successful!");
+      shoppingmainrender()
     } else {
       console.log("Invalid credentials. Login failed.");
-      
     }
-  };
+  } else {
+    console.log("Email or password input is missing.");
+  }
+};
+

@@ -1,6 +1,7 @@
+import { shoppingmainrender } from "../../Routing/routes";
 import { FormLogin } from "../../component/forms/loginform";
 import { box } from "../../lib/box";
-
+import { Loginhandler } from "./Logins";
 
 
 export const Login = () => box({
@@ -12,7 +13,7 @@ export const Login = () => box({
         box({
             element: 'div',
             attr: {
-                class: 'w-1/2 h-1/2  bg-gray-50 flex flex-col rounded-xl pt-5',
+                class: 'w-1/2  bg-gray-50 flex flex-col rounded-xl pt-5',
             },
             children: [
                 //up side
@@ -39,7 +40,7 @@ export const Login = () => box({
                         box({ element: 'div', children: FormLogin() }),box({element:'a',children:'Forget Password',attr:{class:'text-lg font-semibold  flex justify-center mt-8'}}),
                         box({
                             element: 'div', children: [
-                                box({ element: 'button', children: 'Log in', attr: { class: 'fontm items-center flex justify-center text-xl font-bold mt-10 w-1/2 p-4 bg-slate-900 rounded-xl text-white', style: 'background: var(--Primary, #242424);box-shadow: 0px 10px 20px 0px rgba(48, 48, 48, 0.25);' } }),
+                                box({ element: 'button', children: 'Log in', attr: { class: 'fontm items-center flex justify-center text-xl font-bold mt-10 w-1/2 p-4 bg-slate-900 rounded-xl text-white', style: 'background: var(--Primary, #242424);box-shadow: 0px 10px 20px 0px rgba(48, 48, 48, 0.25);',onclick:Loginhandler} }),
                             ],attr:{class:'flex justify-center'}
                         }),box({element:'a',children:'Sign Up',attr:{class:'text-lg font-semibold  flex justify-center mt-8'}})
                     ], attr: { class: 'bg-white h-4/5 mr-10  mb-10 justify-center flex flex-col p-8', style: 'box-shadow: 0px 7px 30px 0px rgba(138, 149, 158, 0.20);' }

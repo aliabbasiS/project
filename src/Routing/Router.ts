@@ -1,37 +1,41 @@
-// Import necessary modules or dependencies as nee
-import { mainpage } from '../pages/mainpage/mainpage';
-import { Login } from '../pages/Login/login';
-import { register } from '../pages/register/register';
-import { routes } from './routes';
+import { main, registerrender,favoriterender, Loginrender, shoppingmainrender} from './routes'; // Import the main function from the corresponding file
+;
 
-// Define a routing function
-function route(routes:object) {
+export function route(routes: string) {
+  const change = () => {
+    window.history.pushState(null, '', routes);
+  };
+  change();
+
   switch (routes) {
-    
     case '/':
-      return mainpage(); // Render the home page component
+      main();
+      break;
     case '/register':
-      return register(); // Render the register page component
-    case '/login':
-      return Login(); // Render the login page component
+      registerrender(); // Render the register page component
+      break;
+    case '/Login':
+      (Loginrender()); // Render the login page component
+      break;
     case '/landing':
-      return LandingPage(); // Render the landing page component
-    
+      shoppingmainrender(); // Render the landing page component
+      break;
+    case '/favorite':
+      favoriterender() // Render the landing page component
+      break;
+    default:
+      break;
   }
 }
 
 // Example usage
-const currentPath = '/'; // Example current path
+const currentPath = '/landing'; // Example current path
 
 // Find the corresponding title for the current path from the navbar array
 
-
 // Call the routing function with the current path
-const renderedPage = route(currentPath);
-
-// Render the returned page component to the DOM
-renderToDOM(renderedPage);
+route(currentPath);
 
 // Print the current path and title
 console.log(`Current path: ${currentPath}`);
-console.log(`Current title: ${currentTitle}`);
+
