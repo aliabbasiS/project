@@ -6,6 +6,8 @@ import { mainpage } from './../pages/mainpage/mainpage';
 import { favorite } from './../pages/favotitepage/favorite';
 import { shoppingmain } from './../pages/shopping/shoppingmain';
 import { standshopcard } from '../pages/mainshopcart/standmainshop';
+import { payingshop } from '../pages/shop/paying';
+import { paying } from '../pages/shopping/paying/payingbox';
 
 export const routes=()=>{
     [
@@ -69,6 +71,16 @@ export const standshopcardrender=()=>{
   if (container) {
     container.innerHTML = '';
     const form =standshopcard();
+    container.appendChild(form);
+  }
+  
+};
+export const payingrender = () => {
+  const container = document.getElementById('app');
+
+  if (container) {
+    container.innerHTML = '';
+    const form =paying();
     container.appendChild(form);
   }
 };

@@ -5,6 +5,7 @@ type shopsmakertype={
     price:string
 }
 import { box } from "../../lib/box"
+import { standshopcardrender } from '../../Routing/routes'
 export const shopcartmaker=(props:shopsmakertype)=>{
     return box({
         element:'div',children:[box({element:'div',children:[
@@ -14,7 +15,7 @@ export const shopcartmaker=(props:shopsmakertype)=>{
             ,box({element:'a',children:[
 
                 box({element:'img',attr:{class:'w-7 over-hidden ',style:'position: relative;left: 13.5rem;top: -3rem;',src:'pixar/shopping-icon-card.jpg'}})
-            ],attr:{href:'https://www.google.com'}
+            ],attr:{onclick:standshopcardrender}
         })
             ,box({element:'h1',children:props.title,attr:{class:'text-xl text-slate-500'}}),
             box({element:'span',children:props.price,attr:{class:'text-lg font-bold'}})

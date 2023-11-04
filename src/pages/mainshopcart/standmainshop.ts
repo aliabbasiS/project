@@ -1,6 +1,8 @@
+import { favoriterender, payingrender, shoppingmainrender } from "../../Routing/routes";
 import { box } from "../../lib/box";
 import { favoritemakerarr } from "../favotitepage/favoritelist";
-import { handlePlusClick,handleMinusClick } from "./clickhandler";
+import { shoppingmain } from "../shopping/shoppingmain";
+import { handlePlusClick,handleMinusClick, buttonhandler } from "./clickhandler";
 
 
 export const standshopcard = () => {
@@ -36,7 +38,7 @@ export const standshopcard = () => {
                 //up left
 
                 box({element:'div',children:[
-                    box({element:'img',attr:{src:'public/pixar/backarrow.jpg'}}),box({element:'img',attr:{src:'public/pixar/colorpallet.jpg',class:'pb-7 '}})
+                    box({element:'img',attr:{src:'public/pixar/backarrow.jpg',onclick:shoppingmainrender}}),box({element:'img',attr:{src:'public/pixar/colorpallet.jpg',class:'pb-7 '}})
                 ],attr:{class:' flex flex-col '}})
                 
             ],attr:{class:'flex justify-end flex-row-reverse  justify-between'}}),
@@ -66,8 +68,8 @@ export const standshopcard = () => {
 
             //footer button
             box({element:'div',children:[
-                box({element:'button',children:'Add to cart',attr:{class:"w-4/5 h-20 bg-slate-900 text-white rounded-lg text-2xl"}})
-                ,box({element:'button',children:[box({element:'img',attr:{src:'public/pixar/marker-2.svg',class:'bg-slate-200'}})],attr:{class:"flex justify-center items-center w-1/5 h-20 bg-slate-200 text-white rounded-lg"}}),
+                box({element:'button',children:'Add to cart',attr:{class:"w-4/5 h-20 bg-slate-900 text-white rounded-lg text-2xl",onclick:payingrender}})
+                ,box({element:'button',children:[box({element:'img',attr:{src:'public/pixar/marker-2.svg',class:'bg-slate-200',onclick:favoriterender}})],attr:{class:"flex justify-center items-center w-1/5 h-20 bg-slate-200 text-white rounded-lg",}}),
                   
                 
             ],attr:{class:'flex gap-3 mt-5 flex-row-reverse px-3 '}})

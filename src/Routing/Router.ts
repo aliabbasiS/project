@@ -23,13 +23,18 @@ export function route(routes: string) {
     case '/favorite':
       favoriterender() // Render the landing page component
       break;
+    case '/paying':
+      favoriterender() // Render the landing page component
+      break;
+    
+      
     default:
       break;
   }
 }
 
 // Example usage
-const currentPath = '/landing'; // Example current path
+const currentPath = '/'; // Example current path
 
 // Find the corresponding title for the current path from the navbar array
 

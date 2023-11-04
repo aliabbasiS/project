@@ -1,5 +1,5 @@
 
-import { favoriterender, shoppingmainrender } from '../../Routing/routes';
+import { favoriterender, payingrender, shoppingmainrender } from '../../Routing/routes';
 import { box } from './../../lib/box';
 import { favoritemaker } from './favoritelist';
 
@@ -32,7 +32,7 @@ export const favorite = () => {
         
           box({element:'div',children:[
             //footerbuton
-              box({element:'button',children:'Add all to my cart',attr:{class:'w-full bg-black h-20 text-white text-2xl rounded-xl',style:'box-shadow: 0px 10px 20px 0px rgba(48, 48, 48, 0.25);'}}),
+              box({element:'button',children:'Add all to my cart',attr:{class:'w-full bg-black h-20 text-white text-2xl rounded-xl',style:'box-shadow: 0px 10px 20px 0px rgba(48, 48, 48, 0.25);',onclick:payingrender}}),
               //footer icons
               box({element:'div',children:[
                 box({element:'img',attr:{src:'/pixar/house-footer.jpg',onclick:shoppingmainrender}}),

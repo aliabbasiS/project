@@ -6,12 +6,14 @@ import { mainpage } from "../pages/mainpage/mainpage.ts";
 import { lampshopcard } from "../pages/mainshopcart/lampmainshop.ts";
 import { standshopcard } from "../pages/mainshopcart/standmainshop.ts";
 import { register } from "../pages/register/register.ts";
+import { paying } from "../pages/shopping/paying/payingbox.ts";
+
 import { shoppingmain } from "../pages/shopping/shoppingmain.ts";
 
 
 export const layout = () => {
-  return (lampshopcard())
+  return (standshopcard())
 };
-// export const layout = (path) => {
+// export const layout = (path='/') => {
 //   return (route(path))
 // };

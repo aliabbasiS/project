@@ -16,10 +16,10 @@ function verifyList(props: registerformtype): void {
       
        ;
     } else {
-      alert("Your email is not a valid email address: " + props.email);
+      console.log("Your email is not a valid email address: " + props.email);
     }
   } else {
-    alert("Your password and repeat password are not the same");
+    console.log("Your password and repeat password are not the same");
   }
 }
 
@@ -30,6 +30,7 @@ function validateEmail(email: string): boolean {
 
 const saveToLocalStorage = (props: registerformtype): void => {
   localStoragearr.push(props);
+  localStorage.removeItem('user')
   localStorage.setItem("user", JSON.stringify(localStoragearr));
   Loginrender()
 };
