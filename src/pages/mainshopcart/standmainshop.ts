@@ -15,7 +15,7 @@ export const standshopcard = () => {
       box({
         element: 'div',
         attr: {
-          class: 'w-1/2 h-1/2 flex flex-col  ',
+          class: 'w-1/2  flex flex-col  ',
         },
         children: [
             //up right img

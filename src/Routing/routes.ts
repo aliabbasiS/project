@@ -8,6 +8,7 @@ import { shoppingmain } from './../pages/shopping/shoppingmain';
 import { standshopcard } from '../pages/mainshopcart/standmainshop';
 import { payingshop } from '../pages/shop/paying';
 import { paying } from '../pages/shopping/paying/payingbox';
+import { ending } from './../pages/ending/ending';
 
 export const routes=()=>{
     [
@@ -81,6 +82,15 @@ export const payingrender = () => {
   if (container) {
     container.innerHTML = '';
     const form =paying();
+    container.appendChild(form);
+  }
+};
+export const endingrender = () => {
+  const container = document.getElementById('app');
+
+  if (container) {
+    container.innerHTML = '';
+    const form =ending();
     container.appendChild(form);
   }
 };

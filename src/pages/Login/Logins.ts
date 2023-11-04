@@ -5,7 +5,7 @@ const userString = localStorage.getItem('user');
 const arr: registerformtype[] = userString ? JSON.parse(userString) : [];
 
 function findMatchingMember(email: string, password: string): registerformtype | undefined {
-  const matchingMember = arr.find((member: registerformtype) => member.email === email && member.password === password);
+  const matchingMember = arr.find((member: registerformtype) => member.email.toLowerCase() === email.toLowerCase() && member.password === password);
   console.log("Matching Member:", matchingMember);
   return matchingMember;
 }
@@ -13,8 +13,8 @@ function findMatchingMember(email: string, password: string): registerformtype |
 export const Loginhandler = () => {
   const emailInput = (document.getElementById('email') as HTMLInputElement)?.value;
   const passwordInput = (document.getElementById('password') as HTMLInputElement)?.value;
-  alert("Email Input: ${emailInput}");
-  alert("Password Input: ${passwordInput}");
+  alert(`Email Input: ${emailInput}`);
+  alert(`Password Input: ${passwordInput}`);
 
   if (emailInput && passwordInput) {
     const matchingMember = findMatchingMember(emailInput, passwordInput);

@@ -18,7 +18,7 @@ export const register = () => {
       box({
         element: 'div',
         attr: {
-          class: 'w-1/2 h-1/2  flex flex-col gap-3 rounded-5 px-5',
+          class: 'w-1/2  flex flex-col gap-3 rounded-5 px-5',
         },
         children: [
           //up side

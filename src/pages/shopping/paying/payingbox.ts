@@ -1,4 +1,4 @@
-import { standshopcardrender } from "../../../Routing/routes";
+import { endingrender, standshopcardrender } from "../../../Routing/routes";
 import { box } from "../../../lib/box"
 import { handleMinusClick, handlePlusClick } from "../../mainshopcart/clickhandler";
 
@@ -69,7 +69,7 @@ export const paying = () => {
                 box({element:'h1',children:'Total:',attr:{class:'text-xl font-semibold text-gray-500'}}),
                 box({element:'span',children:'$ 25.00',attr:{class:'text-xl font-semibold text-solid-500',id:'pricediv'}})
               ],attr:{class:'flex justify-between'}})
-              ,box({element:'button',children:'Check out ',attr:{class:'w-full h-20 bg-slate-900 text-white text-2xl rounded-xl',style:'box-shadow: 0px 10px 20px 0px rgba(48, 48, 48, 0.25);'}})
+              ,box({element:'button',children:'Check out ',attr:{class:'w-full h-20 bg-slate-900 text-white text-2xl rounded-xl',style:'box-shadow: 0px 10px 20px 0px rgba(48, 48, 48, 0.25);',onclick:endingrender}})
             
 
             ],attr:{class:'flex flex-col gap-5'}})

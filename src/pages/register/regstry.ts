@@ -16,10 +16,10 @@ function verifyList(props: registerformtype): void {
       
        ;
     } else {
-      console.log("Your email is not a valid email address: " + props.email);
+      alert("Your email is not a valid email address: " + props.email);
     }
   } else {
-    console.log("Your password and repeat password are not the same");
+    alert("Your password and repeat password are not the same");
   }
 }
 
