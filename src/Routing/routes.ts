@@ -6,9 +6,9 @@ import { mainpage } from './../pages/mainpage/mainpage';
 import { favorite } from './../pages/favotitepage/favorite';
 import { shoppingmain } from './../pages/shopping/shoppingmain';
 import { standshopcard } from '../pages/mainshopcart/standmainshop';
-import { payingshop } from '../pages/shop/paying';
 import { paying } from '../pages/shopping/paying/payingbox';
 import { ending } from './../pages/ending/ending';
+import { pays } from '../pages/ending/pays';
 
 export const routes=()=>{
     [
@@ -94,3 +94,13 @@ export const endingrender = () => {
     container.appendChild(form);
   }
 };
+export const checkoutrender = () => {
+  const container = document.getElementById('app');
+
+  if (container) {
+    container.innerHTML = '';
+    const form =pays();
+    container.appendChild(form);
+  }
+};
+

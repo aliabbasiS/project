@@ -13,8 +13,8 @@ function findMatchingMember(email: string, password: string): registerformtype |
 export const Loginhandler = () => {
   const emailInput = (document.getElementById('email') as HTMLInputElement)?.value;
   const passwordInput = (document.getElementById('password') as HTMLInputElement)?.value;
-  alert(`Email Input: ${emailInput}`);
-  alert(`Password Input: ${passwordInput}`);
+  console.log(`Email Input: ${emailInput}`);
+  console.log(`Password Input: ${passwordInput}`);
 
   if (emailInput && passwordInput) {
     const matchingMember = findMatchingMember(emailInput, passwordInput);
